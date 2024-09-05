@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/style": "^0.8.0",
+    "@mui/material": "^6.0.2",
+    "@pinecone-database/pinecone": "^3.0.2",
+    "next": "14.2.8",
+    "openai": "^4.57.3",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.8"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
