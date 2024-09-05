@@ -1,0 +1,124 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. Emily Chen",
+        "subject": "Computer Science",
+        "stars": 5,
+        "review": "Dr. Chen is an exceptional instructor. Her lectures are engaging and she explains complex concepts clearly."
+      },
+      {
+        "professor": "Prof. Michael Johnson",
+        "subject": "History",
+        "stars": 4,
+        "review": "Prof. Johnson's passion for history is contagious. His classes are always interesting, though sometimes a bit disorganized."
+      },
+      {
+        "professor": "Dr. Sarah Thompson",
+        "subject": "Biology",
+        "stars": 5,
+        "review": "Dr. Thompson's labs are fantastic. She encourages critical thinking and makes difficult topics accessible."
+      },
+      {
+        "professor": "Prof. David Lee",
+        "subject": "Mathematics",
+        "stars": 3,
+        "review": "Prof. Lee knows his subject well, but his teaching style can be dry at times. Extra office hours help."
+      },
+      {
+        "professor": "Dr. Rachel Green",
+        "subject": "Psychology",
+        "stars": 5,
+        "review": "Dr. Green is an inspiration. Her research-based approach and real-world examples make the class very relevant."
+      },
+      {
+        "professor": "Prof. Robert Brown",
+        "subject": "English Literature",
+        "stars": 4,
+        "review": "Prof. Brown's analysis of classic works is insightful. He could improve on providing more timely feedback on essays."
+      },
+      {
+        "professor": "Dr. Lisa Wang",
+        "subject": "Chemistry",
+        "stars": 5,
+        "review": "Dr. Wang's enthusiasm for chemistry is infectious. Her demonstrations make complex reactions understandable."
+      },
+      {
+        "professor": "Prof. James Wilson",
+        "subject": "Economics",
+        "stars": 2,
+        "review": "Prof. Wilson's lectures are often confusing. The textbook is more helpful than his explanations."
+      },
+      {
+        "professor": "Dr. Maria Rodriguez",
+        "subject": "Sociology",
+        "stars": 4,
+        "review": "Dr. Rodriguez brings fresh perspectives to social issues. Group discussions in her class are always enlightening."
+      },
+      {
+        "professor": "Prof. Thomas Clark",
+        "subject": "Physics",
+        "stars": 3,
+        "review": "Prof. Clark is knowledgeable but can be impatient with questions. His problem sets are challenging but instructive."
+      },
+      {
+        "professor": "Dr. Anna Petrova",
+        "subject": "Art History",
+        "stars": 5,
+        "review": "Dr. Petrova's passion for art is evident in every lecture. Her virtual museum tours are a highlight of the course."
+      },
+      {
+        "professor": "Prof. John Smith",
+        "subject": "Political Science",
+        "stars": 4,
+        "review": "Prof. Smith encourages lively debates in class. His balanced approach to controversial topics is commendable."
+      },
+      {
+        "professor": "Dr. Karen White",
+        "subject": "Environmental Science",
+        "stars": 5,
+        "review": "Dr. White's field trips make learning about ecosystems hands-on and unforgettable. She's an excellent mentor."
+      },
+      {
+        "professor": "Prof. Hassan Ahmed",
+        "subject": "Engineering",
+        "stars": 3,
+        "review": "Prof. Ahmed's projects are innovative, but his lectures can be hard to follow. More practical examples would help."
+      },
+      {
+        "professor": "Dr. Olivia Parker",
+        "subject": "Neuroscience",
+        "stars": 5,
+        "review": "Dr. Parker's ability to simplify complex neurological concepts is remarkable. Her research opportunities for students are invaluable."
+      },
+      {
+        "professor": "Prof. George Taylor",
+        "subject": "Philosophy",
+        "stars": 4,
+        "review": "Prof. Taylor's Socratic method keeps the class engaged. His essay prompts really make you think deeply about the material."
+      },
+      {
+        "professor": "Dr. Yuki Tanaka",
+        "subject": "Linguistics",
+        "stars": 5,
+        "review": "Dr. Tanaka's comparative language studies are fascinating. Her enthusiasm makes even grammar exciting."
+      },
+      {
+        "professor": "Prof. Linda Martinez",
+        "subject": "Business Administration",
+        "stars": 2,
+        "review": "Prof. Martinez's real-world experience is valuable, but her teaching style is unstructured and often confusing."
+      },
+      {
+        "professor": "Dr. Samuel Osei",
+        "subject": "African Studies",
+        "stars": 5,
+        "review": "Dr. Osei brings history to life with his storytelling. His course provides a comprehensive view of African cultures and politics."
+      },
+      {
+        "professor": "Prof. Elizabeth Grant",
+        "subject": "Music Theory",
+        "stars": 4,
+        "review": "Prof. Grant's ear training exercises are challenging but effective. Her composition workshops are a highlight of the program."
+      }
+    ]
+  }
