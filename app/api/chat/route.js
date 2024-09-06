@@ -1,6 +1,6 @@
 import {NextResponse} from 'next/server'
-import {Pinecone} from '@pinecone-database/pinecone'
-import OpenAI from 'openai'
+import { Pinecone } from '@pinecone-database/pinecone';
+import OpenAI from 'openai';
 
 const systemPrompt = `
 #RateMyProfessor Agent System Prompt
@@ -35,16 +35,19 @@ Be proactive in offering additional help or information if relevant.
 `
 export async function POST(req){
     const data = await req.json()
-    const pc = new Pinecone({
-            apiKey: process.env.PINECONE_API_KEY, 
-
-        })
-    const index = pc.index('rag').namespace('ns1')
-    const openai = new OpenAI()
+    const pc = new Pinecone();
+    await pc.init({
+      apiKey: process.env.PINECONE_API_KEY,
+      environment: 'us-west1-gcp', // Make sure this matches your Pinecone environment
+    });
+    const index = pc.Index('rag').namespace('ns1'); // Correct initialization for accessing the index
+    const openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY, // Check the correct key setup
+      });
 
     const text = data[data.length - 1].content
-    const embedding = await OpenAI.Embeddings.create({
-        model:'text-embedding-3-samll',
+    const embedding = await openai.Embeddings.create({
+        model:'text-embedding-3-small',
         input: text,
         encoding_format: 'float'
     })
@@ -80,7 +83,7 @@ export async function POST(req){
         stream: true,
     })
 
-    const stream = ReadableStream({
+    const stream = new ReadableStream({
         async start(controller){
             const encoder = new TextEncoder()
             try{
@@ -100,5 +103,5 @@ export async function POST(req){
         }
     })
 
-    return new NextResponse(stream)
+    return new NextResponse(stream);
 }
