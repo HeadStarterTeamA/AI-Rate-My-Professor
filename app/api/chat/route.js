@@ -1,6 +1,14 @@
 import {NextResponse} from 'next/server'
 import { Pinecone } from '@pinecone-database/pinecone';
 import OpenAI from 'openai';
+import dotenv from 'dotenv';
+
+import fetch from 'node-fetch';
+if (!global.fetch) {
+    global.fetch = fetch;
+  }
+
+dotenv.config();
 
 const systemPrompt = `
 #RateMyProfessor Agent System Prompt
@@ -35,18 +43,35 @@ Be proactive in offering additional help or information if relevant.
 `
 export async function POST(req){
     const data = await req.json()
-    const pc = new Pinecone();
-    await pc.init({
+    const pc = new Pinecone({  //();
+    // await pc.init({
       apiKey: process.env.PINECONE_API_KEY,
-      environment: 'us-west1-gcp', // Make sure this matches your Pinecone environment
+    //   environment: 'us-west1-gcp', // Make sure this matches your Pinecone environment
     });
-    const index = pc.Index('rag').namespace('ns1'); // Correct initialization for accessing the index
-    const openai = new OpenAI({
+    const index = pc.index('rag').namespace('ns1'); // Correct initialization for accessing the index
+    const openai = new OpenAI ({
         apiKey: process.env.OPENAI_API_KEY, // Check the correct key setup
       });
 
+
+//     const pc = new Pinecone();
+//   await pc.init({
+//     apiKey: process.env.PINECONE_API_KEY,
+//     environment: 'us-west1-gcp', // Make sure this matches your Pinecone environment
+//   });
+  
+//   // Access the index
+//   const index = pc.Index('rag'); // Use correct method to access Pinecone index
+
+//   // Initialize OpenAI client
+//   const openai = new OpenAI({
+//     apiKey: process.env.OPENAI_API_KEY, // Load API key for OpenAI
+//   });
+
+
+  
     const text = data[data.length - 1].content
-    const embedding = await openai.Embeddings.create({
+    const embedding = await openai.embeddings.create({
         model:'text-embedding-3-small',
         input: text,
         encoding_format: 'float'
